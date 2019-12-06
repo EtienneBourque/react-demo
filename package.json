@@ -4,18 +4,21 @@
   "private": true,
   "homepage": "https://etiennebourque.github.io/react-demo",
   "dependencies": {
-    "@types/jest": "24.0.23",
-    "@types/node": "12.12.7",
-    "@types/react": "16.9.11",
-    "@types/react-dom": "16.9.4",
-    "eslint-config-prettier": "^6.5.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.14",
+    "@types/react": "^16.9.15",
+    "@types/react-dom": "^16.9.4",
+    "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-prettier": "^3.1.1",
     "gh-pages": "^2.1.1",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.2.0",
-    "typescript": "3.7.2"
+    "react-scripts": "3.3.0",
+    "typescript": "^3.7.3"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -24,13 +27,15 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint . --ext .ts,.tsx"
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
+      "plugin:prettier/recommended",
       "prettier/@typescript-eslint",
-      "plugin:prettier/recommended"
+      "prettier/react"
     ]
   },
   "browserslist": {
